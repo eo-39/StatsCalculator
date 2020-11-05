@@ -1,36 +1,10 @@
-import math
+from .Addition import  addition
+from .Subtraction import subtraction
+from .Multiplication import multiplication
+from .Divison import division
+from .Squared import squared
+from .SquareRoot import square_root
 
-def addition(a, b):
-    a = int(a)
-    b = int(b)
-    c = a + b
-    return c
-
-def subtraction(a, b):
-    a = int(a)
-    b = int(b)
-    c = b - a
-    return c
-
-def multiplication(a,b):
-    a = int(a)
-    b = int(b)
-    c = a * b
-    return c
-
-def division(a,b):
-    a = float(a)
-    b = float(b)
-    c = round(b / a, 9)
-    return c
-
-def squared(a):
-    a = int(a)
-    b = a * a
-    return b
-
-def square_root(a):
-        return round(math.sqrt(float(a)), 9)
 
 class Calculator:
     result = 0

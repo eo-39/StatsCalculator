@@ -1,7 +1,7 @@
 import unittest
-from Calculator import Calculator
-from CsvReader import CsvReader
-from pprint import pprint
+from .Calculator.Calculator import Calculator
+from .CsvReader.CsvReader import CsvReader
+
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
