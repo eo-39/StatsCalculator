@@ -9,6 +9,6 @@ script:
 
 branches:
   only:
-    - main
+    - master
     - /^feature.*$/
 
