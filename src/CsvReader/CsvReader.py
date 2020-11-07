@@ -13,7 +13,7 @@ class CsvReader:
     def __init__(self):
         pass
 
-    def __init__(self, filepath):
+    def csv(self, filepath):
         with open(filepath, 'r') as text_data:
             csv_data = csv.DictReader(text_data, delimiter=',')
             for row in csv_data:
