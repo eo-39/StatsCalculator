@@ -1,6 +1,5 @@
 
 import csv
-from src.Fileutilities.absolutepath import absolute_path
 
 
 #def class_factory(class_name, dictionary):
