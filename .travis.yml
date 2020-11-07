@@ -9,6 +9,6 @@ script:
 
 branches:
   only:
-    - master
+    - main
     - development
 
