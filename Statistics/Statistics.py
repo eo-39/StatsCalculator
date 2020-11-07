@@ -1,4 +1,4 @@
-from src.Calculator.Calculator import Calculator
+from Calculator import Calculator
 
 
 class Statistics(Calculator):
