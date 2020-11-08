@@ -3,12 +3,21 @@
 
 # StatsCalculator
 
-| Todo                        | Progress  |  Review |  Done |  
-|-----------------------------|-----------|---------|-------|
-| Restructure Progress        | Ebinehita |         |  Done |   
-| Outline                     |  Sahar    |         |       |   
-| Build Travis                |Ebinehita  |         |  Done |   
-|  Stats(Mean,Z, Median,etc)  |           |         |       |
-| Random Number Generator     |           |         |       |
-|                             |           |         |       |
+| Todo                        | Progress  |  Review  |  Done |  
+|-----------------------------|-----------|----------|--------|
+| Restructure Progress        | Ebinehita |          |  Done  |   
+| Outline                     |  Sahar    |          |        |   
+| Build Travis                |Ebinehita  |          |  Done  |   
+|  Stats(Mean,Z, Median,etc)  |   Sahar   |Ebinehita |        |
+| Random Number Generator     |           |          |        |
+| Divide by Zero/empty list   |           |          |        |
 
+
+
+
+
+Tasks                   | Domain          | First Appearance
+------------------------- | --------------- | ----------------
+ShinRa                    | Mako Reactors   | FFVII
+Moogles                   | MogNet          | FFIII
+Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
