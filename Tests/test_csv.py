@@ -20,10 +20,10 @@ class MyTestCase(unittest.TestCase):
 
     def test_empty_list(self):
        #Empty list
-       filepath = './Tests/Data/Unit Test Empty.csv'
+       #filepath = './Tests/Data/Unit Test Empty.csv'
        #Non-Empty List
 
-       #filepath = './Tests/Data/Unit Test Addition.csv'
+       filepath = './Tests/Data/Unit Test Addition.csv'
        file_data = self.datafile.csv(filepath)
        file_data.clear()
 
