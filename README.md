@@ -3,10 +3,12 @@
 
 # StatsCalculator
 
-| Todo  | Progress  |  Review |  Done |  
-|-------|-----------|---------|-------|
-|       |           |         |       |   
-|       |           |         |       |   
-|       |           |         |       |   
-
+| Todo                        | Progress  |  Review |  Done |  
+|-----------------------------|-----------|---------|-------|
+| Restructure Progress        | Ebinehita |         |  Done |   
+| Outline                     |  Sahar    |         |       |   
+| Build Travis                |Ebinehita  |         |  Done |   
+|  Stats(Mean,Z, Median,etc)  |           |         |       |
+| Random Number Generator     |           |         |       |
+|                             |           |         |       |
 
