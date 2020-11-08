@@ -3,7 +3,7 @@
 
 # StatsCalculator
 
-| ##Task  | ## Progress  |   |   |  
+| ## Task  | ## Progress  |   |   |  
 |---|---|---|---|
 |   |   |   |   |   
 |   |   |   |   |   
