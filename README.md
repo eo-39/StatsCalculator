@@ -21,3 +21,7 @@ Tasks                     | Description                           | Developer
 Restructure Task          | Restrucing project to work on travis  | Ebinehita
   Run Travis              | Run Travis to run builds              | Ebineita Olumese
    Divide by 0            | input exception in Divison class      | Ebinehita Olumese
+   Empty List             |                                       | Ebinehita Olumese
+                          |                                       | Ebineita Olumese
+   Divide by 0            | input exception in Divison class      | Ebinehita Olumese
+   
