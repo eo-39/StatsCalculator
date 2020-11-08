@@ -22,7 +22,6 @@ class MyTestCase(unittest.TestCase):
        #Empty list
        #filepath = './Tests/Data/Unit Test Empty.csv'
        #Non-Empty List
-
        filepath = './Tests/Data/Unit Test Addition.csv'
        file_data = self.datafile.csv(filepath)
        file_data.clear()
