@@ -16,8 +16,8 @@
 
 
 
-Tasks                   | Domain          | First Appearance
+Tasks                     | Description     | Developer
 ------------------------- | --------------- | ----------------
-ShinRa                    | Mako Reactors   | FFVII
-Moogles                   | MogNet          | FFIII
-Vana'diel Chocobo Society | Chocobo Raising | FFXI:TOAU
+Restructure Task          | Restrucing project to work on travis  | 
+  Run Travis              | Run Travis to run builds        | 
+   Divide by 0            | Chocobo Raising | 
