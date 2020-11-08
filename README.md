@@ -3,10 +3,10 @@
 
 # StatsCalculator
 
-| Todo| Progress  |  Review |  Done |  
-|---  |---        |---      |---    |
-|     |           |         |       |   
-|     |           |         |       |   
-|     |           |         |       |   
+| Todo  | Progress  |  Review |  Done |  
+|-------|-----------|---------|-------|
+|       |           |         |       |   
+|       |           |         |       |   
+|       |           |         |       |   
 
 
