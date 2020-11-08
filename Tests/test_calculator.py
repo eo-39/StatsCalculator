@@ -52,7 +52,6 @@ class MyTestCase(unittest.TestCase):
     def test_square_method_calculator(self):
         filepath = './Tests/Data/Unit Test Square.csv'
         csv_data = self.datafile.csv(filepath)
-        self.assertEqual(self.calculator.divide(5, 0), 1)
         for row in csv_data:
             self.assertEqual(self.calculator.square(row['Value 1']), int(row['Result']))
             csv_data.clear()
