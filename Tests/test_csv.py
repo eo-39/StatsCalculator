@@ -20,7 +20,7 @@ class MyTestCase(unittest.TestCase):
     def test_empty_list(self):
        #filepath = './Tests/Data/Unit Test Empty.csv'
 
-       filepath ='Test/Data/Unit Test Empty.csv'
+       filepath ='./Tests/Data/Unit Test Empty.csv'
 
        file_data = self.datafile.csv(filepath)
        # for row in file_data:
