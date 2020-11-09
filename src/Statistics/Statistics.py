@@ -1,10 +1,10 @@
-from Calculator.Calculator import Calculator
-from Statistics.Mean import get_mean
-from Statistics.Median import get_median
-from Statistics.Mode import get_mode
-from Statistics.Variance import get_variance
-from Statistics.StandardDeviation import get_standard_deviation
-from Statistics.ZScore import get_z_score
+from src.Calculator import Calculator
+from src.Statistics.Mean import get_mean
+from src.Statistics.Median import get_median
+from src.Statistics.Mode import get_mode
+from src.Statistics.Variance import get_variance
+from src.Statistics.StandardDeviation import get_standard_deviation
+from src.Statistics.ZScore import get_z_score
 
 
 class Statistics(Calculator):
