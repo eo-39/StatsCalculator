@@ -1,69 +1,68 @@
 import unittest
+import os
+from src.project.Calculator import Calculator
+from src.project.CsvReader import CsvReader
+from parameterized import parameterized, parameterized_class
 
-from src.Calculator import Calculator
-from src.CsvReader import CsvReader
+TEST_DIR = os.path.abspath('./src/test/testscase')
 
-
-class MyTestCase(unittest.TestCase):
-    def setUp(self) -> None:
+class TestCalculator(unittest.TestCase):
+    @classmethod
+    def setUpClass(self):
         self.calculator = Calculator()
-        self.datafile = CsvReader()
 
-    def test_instantiate_calculator(self):
+    @classmethod
+    def tearDownClass(self):
+        if self.calculator is not None:
+            self.calculator = None
 
-        self.assertIsInstance(self.calculator, Calculator)
+    @parameterized.expand(CsvReader(TEST_DIR + '/Addition.csv').readFile())
+    def test_add(self,a,b,expect_result):
+        print("Calculator Class add testing")
+        print( f'{int(a)} + {int(b)} = {int(expect_result)}')
+        result = self.calculator.add(int(a) ,int(b))
+        self.assertEqual(result, int(expect_result))
+    def test_add_error(self):
+        print("Calculator Class add testing")
+        with self.assertRaises(ValueError):
+            result = self.calculator.add('1','2')
 
-    def test_results_property_calculator(self):
 
-        self.assertEqual(self.calculator.result, 0)
+    @parameterized.expand(CsvReader(TEST_DIR + '/Subtraction.csv').readFile())
+    def test_subtract(self, a, b, expected_result):
+        print(f"Substract Testing {self.calculator.minus.__name__}")
+        print(f'{int(a)} - {int(b)} = {int(expected_result)}')
+        result = self.calculator.minus(int(a), int(b))
+        self.assertEqual(result, int(expected_result))
 
-    def test_instantiate_parser(self):
-        self.assertIsInstance(self.datafile, CsvReader)
+    @parameterized.expand(CsvReader(TEST_DIR + '/Division.csv').readFile())
+    def test_divide(self, a, b, expected_result):
+        print(f'{b} / {a} = {expected_result}')
+        result = self.calculator.divide(float(b), float(a))
+        self.assertAlmostEqual(result, float(expected_result))
 
-    def test_add_method_calculator(self):
+    @parameterized.expand(CsvReader(TEST_DIR + '/Multiplication.csv').readFile())
+    def test_multiply(self, a, b, expected_result):
+        print(f'{a} * {b} = {expected_result}')
+        result = self.calculator.multiply(int(b), int(a))
+        self.assertEqual(result, int(expected_result))
 
-        filepath = './Tests/data/Unit Test Addition.csv'
-        csv_data = self.datafile.csv(filepath)
-        for row in csv_data:
-            self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), int(row['Result']))
-        csv_data.clear()
+    @parameterized.expand(CsvReader(TEST_DIR + '/Square.csv').readFile())
+    def test_square(self, a, expected_result):
+        print(f'{a} ^ 2 = {expected_result}')
+        result = self.calculator.square(int(a))
+        self.assertEqual(result, int(expected_result))
+        print(f"Sqare test: {a}^2 ={expected_result}")
 
-    def test_subtraction_method_calculator(self):
-        filepath = './Tests/data/Unit Test Subtraction.csv'
-        csv_data = self.datafile.csv(filepath)
-        for row in csv_data:
-            self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), int(row['Result']))
-        csv_data.clear()
+    @parameterized.expand(CsvReader(TEST_DIR + '/Square Root.csv').readFile())
+    def test_sqrt(self,a,expected_result):
+        print(f'{a} ^ -2 = {expected_result}')
+        result = self.calculator.sqrt(int(a))
+        self.assertAlmostEqual(result,float(expected_result))
 
-    def test_multiplication_method_calculator(self):
-        filepath = './Tests/data/Unit Test Multiplication.csv'
-        csv_data = self.datafile.csv(filepath)
-        for row in csv_data:
-            self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), int(row['Result']))
-        csv_data.clear()
-
-    def test_division_method_calculator(self):
-        filepath = './Tests/data/Unit Test Division.csv'
-        csv_data = self.datafile.csv(filepath)
-        for row in csv_data:
-            self.assertEqual(self.calculator.divide(row['Value 2'], row['Value 1']), float(row['Result']))
-        csv_data.clear()
-
-    def test_square_method_calculator(self):
-        filepath = './Tests/data/Unit Test Square.csv'
-        csv_data = self.datafile.csv(filepath)
-        #Test for Divide by 0
-        #   self.assertEqual(self.calculator.divide(5, 0), 1)
-        for row in csv_data:
-            self.assertEqual(self.calculator.square(row['Value 1']), int(row['Result']))
-            csv_data.clear()
-
-    def test_square_root_method_calculator(self):
-        filepath = './Tests/data/Unit Test Square Root.csv'
-        csv_data = self.datafile.csv(filepath)
-        for row in csv_data:
-            self.assertEqual(self.calculator.square_root(row['Value 1']), float(row['Result']))
-            csv_data.clear()
-
+    def test_sum_list(self):
+        print(f' sumlist [1,2,3] ^ -2 = 6')
+        result = self.calculator.sumList([1,2,3])
+        self.assertEqual(result,6,"SumList:Test")
 if __name__ == '__main__':
     unittest.main()

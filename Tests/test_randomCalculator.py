@@ -1,3 +1,5 @@
+import unittest
+from src.project.RandomCalculator import  RandomCalculator
 
 class MyTestCase(unittest.TestCase):
     @classmethod
