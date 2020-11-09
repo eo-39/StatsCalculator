@@ -22,35 +22,35 @@ class MyTestCase(unittest.TestCase):
 
     def test_add_method_calculator(self):
 
-        filepath = './Tests/testcase/Unit Test Addition.csv'
+        filepath = './Tests/data/Unit Test Addition.csv'
         csv_data = self.datafile.csv(filepath)
         for row in csv_data:
             self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), int(row['Result']))
         csv_data.clear()
 
     def test_subtraction_method_calculator(self):
-        filepath = './Tests/testcase/Unit Test Subtraction.csv'
+        filepath = './Tests/data/Unit Test Subtraction.csv'
         csv_data = self.datafile.csv(filepath)
         for row in csv_data:
             self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), int(row['Result']))
         csv_data.clear()
 
     def test_multiplication_method_calculator(self):
-        filepath = './Tests/testcase/Unit Test Multiplication.csv'
+        filepath = './Tests/data/Unit Test Multiplication.csv'
         csv_data = self.datafile.csv(filepath)
         for row in csv_data:
             self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), int(row['Result']))
         csv_data.clear()
 
     def test_division_method_calculator(self):
-        filepath = './Tests/testcase/Unit Test Division.csv'
+        filepath = './Tests/data/Unit Test Division.csv'
         csv_data = self.datafile.csv(filepath)
         for row in csv_data:
             self.assertEqual(self.calculator.divide(row['Value 2'], row['Value 1']), float(row['Result']))
         csv_data.clear()
 
     def test_square_method_calculator(self):
-        filepath = './Tests/testcase/Unit Test Square.csv'
+        filepath = './Tests/data/Unit Test Square.csv'
         csv_data = self.datafile.csv(filepath)
         #Test for Divide by 0
         #   self.assertEqual(self.calculator.divide(5, 0), 1)
@@ -59,7 +59,7 @@ class MyTestCase(unittest.TestCase):
             csv_data.clear()
 
     def test_square_root_method_calculator(self):
-        filepath = './Tests/testcase/Unit Test Square Root.csv'
+        filepath = './Tests/data/Unit Test Square Root.csv'
         csv_data = self.datafile.csv(filepath)
         for row in csv_data:
             self.assertEqual(self.calculator.square_root(row['Value 1']), float(row['Result']))

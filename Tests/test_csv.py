@@ -11,7 +11,7 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.datafile, CsvReader)
 
     def test_file_parser(self):
-       filepath = './Tests/testcase/Unit Test Addition.csv'
+       filepath = './Tests/data/Unit Test Addition.csv'
        file_data = self.datafile.csv(filepath)
 
 #        for row in file_data:
@@ -20,9 +20,9 @@ class MyTestCase(unittest.TestCase):
 
     def test_empty_list(self):
        #Empty list
-       #filepath = './Tests/testcase/Unit Test Empty.csv'
+       #filepath = './Tests/data/Unit Test Empty.csv'
        #Non-Empty List
-       filepath = './Tests/testcase/Unit Test Addition.csv'
+       filepath = './Tests/data/Unit Test Addition.csv'
        file_data = self.datafile.csv(filepath)
        file_data.clear()
 
