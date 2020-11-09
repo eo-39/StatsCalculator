@@ -1,4 +1,9 @@
-    def __init__(self):
+from turtle import st
+
+from src.Statistics.Statistics import Statistics
+
+
+def __init__(self):
         self.stats = Statistics()
         pass
 
@@ -28,7 +33,7 @@
         return margin_of_error
 
     # Cochran’s Sample Size Formula
-    def get_result_by_cochrans_sample_size(self, p1, p_diff, alpha):
+    def get_result_by_cochrans_sample_size(self, p1, p_diff, alpha, stats=None):
         if p_diff <= 0:
             raise ValueError("p_diff must be > 0")
         n = 1
