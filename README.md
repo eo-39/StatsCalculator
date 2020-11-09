@@ -9,8 +9,8 @@
 | Outline                     |  Sahar    |          |        |   
 | Build Travis                |Ebinehita  |          |  Done  |   
 |  Stats(Mean,Z, Median,etc)  |   Sahar   |Ebinehita |        |
-| Random Number Generator     |           |          |        |
-| Divide by Zero/empty list   |           |          |        |
+| Random Number Generator     | Ebinehita |          |        |
+| Divide by Zero/empty list   | Ebinehita |          | Done   |
 
 
 
